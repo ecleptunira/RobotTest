@@ -7,3 +7,10 @@ Resource    ${ROOT}/CursoTestCase/resources/main.resource
 *** Keywords ***
 
 Abrir navegador
+    Open Browser    about:black     ${BROWSER}
+
+Fechar navegador
+    Close Browser
+
+Tirar foto
+    Capture Page Screenshot     Screenshot.png
