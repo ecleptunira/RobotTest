@@ -8,12 +8,11 @@ Suite Teardown      Fechar navegador
 
 *** Test cases ***
 
-TC 0001: Ligar a luz
+TC 0001: Ligar a luz do quarto
     [Tags]              TC0001
-    [Documentation]     TestCase para ligar a luz do quarto
-    
+    [Documentation]     
 
-TC 0002: 
+TC 0002: Desligar a luz do quarto
     [Tags]              TC0002
     [Documentation]     
 

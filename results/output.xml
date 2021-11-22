@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.1 (Python 3.9.7 on win32)" generated="20211122 20:15:40.692" rpa="false" schemaversion="2">
+<suite id="s1" name="Test" source="D:\CursoRobot\CursoTestCase\tests\test.robot">
+<kw name="Abrir navegador" library="helper" type="SETUP">
+<msg timestamp="20211122 20:15:40.946" level="TRACE">Arguments: [  ]</msg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:black</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211122 20:15:40.946" level="TRACE">Arguments: [ 'about:black' | 'chrome' ]</msg>
+<msg timestamp="20211122 20:15:40.947" level="INFO">Opening browser 'chrome' to base url 'about:black'.</msg>
+<msg timestamp="20211122 20:15:41.920" level="DEBUG">POST http://127.0.0.1:60484/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"extensions": [], "args": []}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"extensions": [], "args": []}}}</msg>
+<msg timestamp="20211122 20:15:41.920" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:60484</msg>
+<msg timestamp="20211122 20:15:42.670" level="DEBUG">http://127.0.0.1:60484 "POST /session HTTP/1.1" 200 788</msg>
+<msg timestamp="20211122 20:15:42.671" level="DEBUG">Finished Request</msg>
+<msg timestamp="20211122 20:15:42.671" level="DEBUG">POST http://127.0.0.1:60484/session/9814303d1ad1170e357583c6becb182e/timeouts {"script": 5000}</msg>
+<msg timestamp="20211122 20:15:42.672" level="DEBUG">http://127.0.0.1:60484 "POST /session/9814303d1ad1170e357583c6becb182e/timeouts HTTP/1.1" 200 14</msg>
+<msg timestamp="20211122 20:15:42.672" level="DEBUG">Finished Request</msg>
+<msg timestamp="20211122 20:15:42.672" level="DEBUG">POST http://127.0.0.1:60484/session/9814303d1ad1170e357583c6becb182e/timeouts {"implicit": 0}</msg>
+<msg timestamp="20211122 20:15:42.673" level="DEBUG">http://127.0.0.1:60484 "POST /session/9814303d1ad1170e357583c6becb182e/timeouts HTTP/1.1" 200 14</msg>
+<msg timestamp="20211122 20:15:42.673" level="DEBUG">Finished Request</msg>
+<msg timestamp="20211122 20:15:42.673" level="DEBUG">POST http://127.0.0.1:60484/session/9814303d1ad1170e357583c6becb182e/url {"url": "about:black"}</msg>
+<msg timestamp="20211122 20:15:42.799" level="DEBUG">http://127.0.0.1:60484 "POST /session/9814303d1ad1170e357583c6becb182e/url HTTP/1.1" 200 14</msg>
+<msg timestamp="20211122 20:15:42.800" level="DEBUG">Finished Request</msg>
+<msg timestamp="20211122 20:15:42.800" level="DEBUG">Opened browser with session id 9814303d1ad1170e357583c6becb182e.</msg>
+<msg timestamp="20211122 20:15:42.800" level="TRACE">Return: 1</msg>
+<status status="PASS" starttime="20211122 20:15:40.946" endtime="20211122 20:15:42.800"/>
+</kw>
+<msg timestamp="20211122 20:15:42.800" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20211122 20:15:40.946" endtime="20211122 20:15:42.800"/>
+</kw>
+<test id="s1-t1" name="TC 0001: Ligar a luz do quarto">
+<kw name="Ir para o site do google tradutor" library="helper">
+<msg timestamp="20211122 20:15:42.803" level="TRACE">Arguments: [  ]</msg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL_GOOGLETRADUTOR}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20211122 20:15:42.803" level="TRACE">Arguments: [ 'https://translate.google.com.br/?hl=pt-BR&amp;sl=pt&amp;tl=en&amp;op=translate' ]</msg>
+<msg timestamp="20211122 20:15:42.803" level="INFO">Opening url 'https://translate.google.com.br/?hl=pt-BR&amp;sl=pt&amp;tl=en&amp;op=translate'</msg>
+<msg timestamp="20211122 20:15:42.803" level="DEBUG">POST http://127.0.0.1:60484/session/9814303d1ad1170e357583c6becb182e/url {"url": "https://translate.google.com.br/?hl=pt-BR&amp;sl=pt&amp;tl=en&amp;op=translate"}</msg>
+<msg timestamp="20211122 20:15:43.567" level="DEBUG">http://127.0.0.1:60484 "POST /session/9814303d1ad1170e357583c6becb182e/url HTTP/1.1" 200 14</msg>
+<msg timestamp="20211122 20:15:43.567" level="DEBUG">Finished Request</msg>
+<msg timestamp="20211122 20:15:43.567" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20211122 20:15:42.803" endtime="20211122 20:15:43.567"/>
+</kw>
+<msg timestamp="20211122 20:15:43.567" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20211122 20:15:42.802" endtime="20211122 20:15:43.567"/>
+</kw>
+<kw name="Escrever &quot;Alexa, ligue a luz&quot;" library="solicitacao" sourcename="Escrever &quot;${COMANDO}&quot;">
+<msg timestamp="20211122 20:15:43.568" level="TRACE">Arguments: [ ${COMANDO}='Alexa, ligue a luz' ]</msg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${GOOGLE_TEXTBOX}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20211122 20:15:43.569" level="TRACE">Arguments: [ 'xpath=://*[@class="QFw9Te"]' ]</msg>
+<msg timestamp="20211122 20:15:43.569" level="DEBUG">POST http://127.0.0.1:60484/session/9814303d1ad1170e357583c6becb182e/elements {"using": "xpath", "value": "://*[@class=\"QFw9Te\"]"}</msg>
+<msg timestamp="20211122 20:15:43.593" level="DEBUG">http://127.0.0.1:60484 "POST /session/9814303d1ad1170e357583c6becb182e/elements HTTP/1.1" 400 1280</msg>
+<msg timestamp="20211122 20:15:43.594" level="DEBUG">Finished Request</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211122 20:15:43.594" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20211122 20:15:43.594" level="DEBUG">GET http://127.0.0.1:60484/session/9814303d1ad1170e357583c6becb182e/screenshot {}</msg>
+<msg timestamp="20211122 20:15:43.787" level="DEBUG">http://127.0.0.1:60484 "GET /session/9814303d1ad1170e357583c6becb182e/screenshot HTTP/1.1" 200 49288</msg>
+<msg timestamp="20211122 20:15:43.787" level="DEBUG">Finished Request</msg>
+<msg timestamp="20211122 20:15:43.788" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20211122 20:15:43.788" level="TRACE">Return: 'D:\\CursoRobot\\CursoTestCase\\results\\selenium-screenshot-1.png'</msg>
+<status status="PASS" starttime="20211122 20:15:43.594" endtime="20211122 20:15:43.788"/>
+</kw>
+<msg timestamp="20211122 20:15:43.814" level="FAIL">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression ://*[@class="QFw9Te"] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '://*[@class="QFw9Te"]' is not a valid XPath expression.
+  (Session info: chrome=96.0.4664.45)
+</msg>
+<msg timestamp="20211122 20:15:43.814" level="DEBUG">Traceback (most recent call last):
+  File "C:\Users\Rafael\AppData\Local\Programs\Python\Python39\lib\site-packages\SeleniumLibrary\__init__.py", line 492, in run_keyword
+    return DynamicCore.run_keyword(self, name, args, kwargs)
+  File "C:\Users\Rafael\AppData\Local\Programs\Python\Python39\lib\site-packages\robotlibcore.py", line 94, in run_keyword
+    return self.keywords[name](*args, **(kwargs or {}))
+  File "C:\Users\Rafael\AppData\Local\Programs\Python\Python39\lib\site-packages\SeleniumLibrary\keywords\waiting.py", line 314, in wait_until_element_is_visible
+    self._wait_until(
+  File "C:\Users\Rafael\AppData\Local\Programs\Python\Python39\lib\site-packages\SeleniumLibrary\keywords\waiting.py", line 426, in _wait_until
+    self._wait_until_worker(condition, timeout, error)
+  File "C:\Users\Rafael\AppData\Local\Programs\Python\Python39\lib\site-packages\SeleniumLibrary\keywords\waiting.py", line 433, in _wait_until_worker
+    if condition():
+  File "C:\Users\Rafael\AppData\Local\Programs\Python\Python39\lib\site-packages\SeleniumLibrary\keywords\waiting.py", line 315, in &lt;lambda&gt;
+    lambda: self.is_visible(locator),
+  File "C:\Users\Rafael\AppData\Local\Programs\Python\Python39\lib\site-packages\SeleniumLibrary\base\context.py", line 111, in is_visible
+    element = self.find_element(locator, required=False)
+  File "C:\Users\Rafael\AppData\Local\Programs\Python\Python39\lib\site-packages\SeleniumLibrary\base\context.py", line 82, in find_element
+    return self.element_finder.find(locator, tag, True, required, parent)
+  File "C:\Users\Rafael\AppData\Local\Programs\Python\Python39\lib\site-packages\SeleniumLibrary\locators\elementfinder.py", line 92, in find
+    return self._find(locators[-1], tag, first_only, required, element)
+  File "C:\Users\Rafael\AppData\Local\Programs\Python\Python39\lib\site-packages\SeleniumLibrary\locators\elementfinder.py", line 122, in _find
+    elements = strategy(criteria, tag, constraints, parent=parent or self.driver)
+  File "C:\Users\Rafael\AppData\Local\Programs\Python\Python39\lib\site-packages\SeleniumLibrary\locators\elementfinder.py", line 180, in _find_by_xpath
+    parent.find_elements(By.XPATH, criteria), tag, constraints
+  File "C:\Users\Rafael\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 1005, in find_elements
+    return self.execute(Command.FIND_ELEMENTS, {
+  File "C:\Users\Rafael\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Rafael\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)</msg>
+<status status="FAIL" starttime="20211122 20:15:43.569" endtime="20211122 20:15:43.814"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${GOOGLE_TEXTBOX}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="NOT RUN" starttime="20211122 20:15:43.814" endtime="20211122 20:15:43.814"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${GOOGLE_TEXTBOX}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20211122 20:15:43.814" endtime="20211122 20:15:43.814"/>
+</kw>
+<kw name="Input texto">
+<arg>${COMANDO}</arg>
+<status status="NOT RUN" starttime="20211122 20:15:43.817" endtime="20211122 20:15:43.817"/>
+</kw>
+<status status="FAIL" starttime="20211122 20:15:43.568" endtime="20211122 20:15:43.818"/>
+</kw>
+<kw name="Pedir para o Google reproduzir o texto" library="solicitacao">
+<status status="NOT RUN" starttime="20211122 20:15:43.818" endtime="20211122 20:15:43.819"/>
+</kw>
+<kw name="Aguardar 5 segundos">
+<status status="NOT RUN" starttime="20211122 20:15:43.823" endtime="20211122 20:15:43.823"/>
+</kw>
+<doc>TestCase para ligar a luz do quarto</doc>
+<tag>executa</tag>
+<tag>TC0001</tag>
+<status status="FAIL" starttime="20211122 20:15:42.800" endtime="20211122 20:15:43.824">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression ://*[@class="QFw9Te"] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '://*[@class="QFw9Te"]' is not a valid XPath expression.
+  (Session info: chrome=96.0.4664.45)
+</status>
+</test>
+<test id="s1-t2" name="TC 0002: Desligar a luz do quarto">
+<kw name="Ir para o site do google tradutor" library="helper">
+<msg timestamp="20211122 20:15:43.829" level="TRACE">Arguments: [  ]</msg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL_GOOGLETRADUTOR}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20211122 20:15:43.829" level="TRACE">Arguments: [ 'https://translate.google.com.br/?hl=pt-BR&amp;sl=pt&amp;tl=en&amp;op=translate' ]</msg>
+<msg timestamp="20211122 20:15:43.829" level="INFO">Opening url 'https://translate.google.com.br/?hl=pt-BR&amp;sl=pt&amp;tl=en&amp;op=translate'</msg>
+<msg timestamp="20211122 20:15:43.829" level="DEBUG">POST http://127.0.0.1:60484/session/9814303d1ad1170e357583c6becb182e/url {"url": "https://translate.google.com.br/?hl=pt-BR&amp;sl=pt&amp;tl=en&amp;op=translate"}</msg>
+<msg timestamp="20211122 20:15:44.390" level="DEBUG">http://127.0.0.1:60484 "POST /session/9814303d1ad1170e357583c6becb182e/url HTTP/1.1" 200 14</msg>
+<msg timestamp="20211122 20:15:44.390" level="DEBUG">Finished Request</msg>
+<msg timestamp="20211122 20:15:44.390" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20211122 20:15:43.829" endtime="20211122 20:15:44.391"/>
+</kw>
+<msg timestamp="20211122 20:15:44.391" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20211122 20:15:43.828" endtime="20211122 20:15:44.391"/>
+</kw>
+<kw name="Escrever &quot;Alexa, desligue a luz&quot;" library="solicitacao" sourcename="Escrever &quot;${COMANDO}&quot;">
+<msg timestamp="20211122 20:15:44.392" level="TRACE">Arguments: [ ${COMANDO}='Alexa, desligue a luz' ]</msg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${GOOGLE_TEXTBOX}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20211122 20:15:44.392" level="TRACE">Arguments: [ 'xpath=://*[@class="QFw9Te"]' ]</msg>
+<msg timestamp="20211122 20:15:44.392" level="DEBUG">POST http://127.0.0.1:60484/session/9814303d1ad1170e357583c6becb182e/elements {"using": "xpath", "value": "://*[@class=\"QFw9Te\"]"}</msg>
+<msg timestamp="20211122 20:15:44.400" level="DEBUG">http://127.0.0.1:60484 "POST /session/9814303d1ad1170e357583c6becb182e/elements HTTP/1.1" 400 1280</msg>
+<msg timestamp="20211122 20:15:44.401" level="DEBUG">Finished Request</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211122 20:15:44.402" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20211122 20:15:44.403" level="DEBUG">GET http://127.0.0.1:60484/session/9814303d1ad1170e357583c6becb182e/screenshot {}</msg>
+<msg timestamp="20211122 20:15:44.532" level="DEBUG">http://127.0.0.1:60484 "GET /session/9814303d1ad1170e357583c6becb182e/screenshot HTTP/1.1" 200 49400</msg>
+<msg timestamp="20211122 20:15:44.533" level="DEBUG">Finished Request</msg>
+<msg timestamp="20211122 20:15:44.534" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20211122 20:15:44.535" level="TRACE">Return: 'D:\\CursoRobot\\CursoTestCase\\results\\selenium-screenshot-2.png'</msg>
+<status status="PASS" starttime="20211122 20:15:44.402" endtime="20211122 20:15:44.535"/>
+</kw>
+<msg timestamp="20211122 20:15:44.537" level="FAIL">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression ://*[@class="QFw9Te"] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '://*[@class="QFw9Te"]' is not a valid XPath expression.
+  (Session info: chrome=96.0.4664.45)
+</msg>
+<msg timestamp="20211122 20:15:44.537" level="DEBUG">Traceback (most recent call last):
+  File "C:\Users\Rafael\AppData\Local\Programs\Python\Python39\lib\site-packages\SeleniumLibrary\__init__.py", line 492, in run_keyword
+    return DynamicCore.run_keyword(self, name, args, kwargs)
+  File "C:\Users\Rafael\AppData\Local\Programs\Python\Python39\lib\site-packages\robotlibcore.py", line 94, in run_keyword
+    return self.keywords[name](*args, **(kwargs or {}))
+  File "C:\Users\Rafael\AppData\Local\Programs\Python\Python39\lib\site-packages\SeleniumLibrary\keywords\waiting.py", line 314, in wait_until_element_is_visible
+    self._wait_until(
+  File "C:\Users\Rafael\AppData\Local\Programs\Python\Python39\lib\site-packages\SeleniumLibrary\keywords\waiting.py", line 426, in _wait_until
+    self._wait_until_worker(condition, timeout, error)
+  File "C:\Users\Rafael\AppData\Local\Programs\Python\Python39\lib\site-packages\SeleniumLibrary\keywords\waiting.py", line 433, in _wait_until_worker
+    if condition():
+  File "C:\Users\Rafael\AppData\Local\Programs\Python\Python39\lib\site-packages\SeleniumLibrary\keywords\waiting.py", line 315, in &lt;lambda&gt;
+    lambda: self.is_visible(locator),
+  File "C:\Users\Rafael\AppData\Local\Programs\Python\Python39\lib\site-packages\SeleniumLibrary\base\context.py", line 111, in is_visible
+    element = self.find_element(locator, required=False)
+  File "C:\Users\Rafael\AppData\Local\Programs\Python\Python39\lib\site-packages\SeleniumLibrary\base\context.py", line 82, in find_element
+    return self.element_finder.find(locator, tag, True, required, parent)
+  File "C:\Users\Rafael\AppData\Local\Programs\Python\Python39\lib\site-packages\SeleniumLibrary\locators\elementfinder.py", line 92, in find
+    return self._find(locators[-1], tag, first_only, required, element)
+  File "C:\Users\Rafael\AppData\Local\Programs\Python\Python39\lib\site-packages\SeleniumLibrary\locators\elementfinder.py", line 122, in _find
+    elements = strategy(criteria, tag, constraints, parent=parent or self.driver)
+  File "C:\Users\Rafael\AppData\Local\Programs\Python\Python39\lib\site-packages\SeleniumLibrary\locators\elementfinder.py", line 180, in _find_by_xpath
+    parent.find_elements(By.XPATH, criteria), tag, constraints
+  File "C:\Users\Rafael\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 1005, in find_elements
+    return self.execute(Command.FIND_ELEMENTS, {
+  File "C:\Users\Rafael\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Rafael\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)</msg>
+<status status="FAIL" starttime="20211122 20:15:44.392" endtime="20211122 20:15:44.537"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${GOOGLE_TEXTBOX}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="NOT RUN" starttime="20211122 20:15:44.538" endtime="20211122 20:15:44.538"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${GOOGLE_TEXTBOX}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20211122 20:15:44.538" endtime="20211122 20:15:44.538"/>
+</kw>
+<kw name="Input texto">
+<arg>${COMANDO}</arg>
+<status status="NOT RUN" starttime="20211122 20:15:44.542" endtime="20211122 20:15:44.542"/>
+</kw>
+<status status="FAIL" starttime="20211122 20:15:44.391" endtime="20211122 20:15:44.542"/>
+</kw>
+<kw name="Pedir para o Google reproduzir o texto" library="solicitacao">
+<status status="NOT RUN" starttime="20211122 20:15:44.543" endtime="20211122 20:15:44.543"/>
+</kw>
+<kw name="Aguardar &quot;5&quot; segundos" library="solicitacao" sourcename="Aguardar &quot;${AGUARDAR}&quot; segundos">
+<status status="NOT RUN" starttime="20211122 20:15:44.543" endtime="20211122 20:15:44.543"/>
+</kw>
+<doc>TestCase para desligar a luz do quarto</doc>
+<tag>executa</tag>
+<tag>TC0002</tag>
+<status status="FAIL" starttime="20211122 20:15:43.828" endtime="20211122 20:15:44.544">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression ://*[@class="QFw9Te"] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '://*[@class="QFw9Te"]' is not a valid XPath expression.
+  (Session info: chrome=96.0.4664.45)
+</status>
+</test>
+<kw name="Fechar navegador" library="helper" type="TEARDOWN">
+<msg timestamp="20211122 20:15:44.548" level="TRACE">Arguments: [  ]</msg>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<msg timestamp="20211122 20:15:44.548" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20211122 20:15:44.548" level="DEBUG">Closing browser with session id 9814303d1ad1170e357583c6becb182e.</msg>
+<msg timestamp="20211122 20:15:44.548" level="DEBUG">DELETE http://127.0.0.1:60484/session/9814303d1ad1170e357583c6becb182e {}</msg>
+<msg timestamp="20211122 20:15:44.599" level="DEBUG">http://127.0.0.1:60484 "DELETE /session/9814303d1ad1170e357583c6becb182e HTTP/1.1" 200 14</msg>
+<msg timestamp="20211122 20:15:44.599" level="DEBUG">Finished Request</msg>
+<msg timestamp="20211122 20:15:46.673" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20211122 20:15:44.548" endtime="20211122 20:15:46.673"/>
+</kw>
+<msg timestamp="20211122 20:15:46.674" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20211122 20:15:44.547" endtime="20211122 20:15:46.674"/>
+</kw>
+<status status="FAIL" starttime="20211122 20:15:40.699" endtime="20211122 20:15:46.674"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="2" skip="0">executa</stat>
+<stat pass="0" fail="1" skip="0">TC0001</stat>
+<stat pass="0" fail="1" skip="0">TC0002</stat>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20211122 20:15:40.727" level="WARN">Imported library 'D:\CursoRobot\CursoTestCase\utils\Config.py' contains no keywords.</msg>
+<msg timestamp="20211122 20:15:40.941" level="ERROR">Error in file 'D:\CursoRobot\CursoTestCase\resources\page_object\solicitacao.robot' on line 2: Resource file 'D:\CursoRobot\resources\main.resource' does not exist.</msg>
+</errors>
+</robot>

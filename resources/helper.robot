@@ -14,3 +14,6 @@ Fechar navegador
 
 Tirar foto
     Capture Page Screenshot     Screenshot.png
+
+Ir para o site do google tradutor
+    Go To       ${URL_GOOGLETRADUTOR}
