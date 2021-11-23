@@ -8,11 +8,12 @@ Suite Teardown      Fechar navegador
 
 *** Test cases ***
 
-TC 0001: Ligar a luz do quarto
+TC 0001: 
     [Tags]              TC0001
     [Documentation]     
+    Conectar com autenticação básica no APi do GitHub
 
-TC 0002: Desligar a luz do quarto
+TC 0002: 
     [Tags]              TC0002
     [Documentation]     
 
