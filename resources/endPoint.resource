@@ -7,6 +7,6 @@ ${MY_USER}      ecleptunira
 
 
 ${URLBASE}      https://api.github.com
-&{ENDPOINT}     user=user
-...             all_repos=users/${MY_USER}/repos
-...             repository=repos/${MY_USER}/RobotTest
+&{ENDPOINT}     usuario=user
+...             todos_repositorios=users/${MY_USER}/repos
+...             repositorio_especifico=repos/${MY_USER}/RobotTest
