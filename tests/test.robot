@@ -8,18 +8,25 @@ Suite Teardown      Fechar navegador
 
 *** Test cases ***
 
-TC 0001: 
+TC 0001: Procurar o Usuario e coletar suas informações
     [Tags]              TC0001
     [Documentation]     
     Conectar com autenticação básica no APi do GitHub
+    Coletar quantidade de repositorio
+    coletar quantos seguidores tem
+    quando criei a conta
 
-TC 0002: 
+TC 0002: Procurando todos os repositorios do usuario
     [Tags]              TC0002
     [Documentation]     
+    Coletar quantos repositorios tem o usuario
+    Qual o nome dos repositorios do usuario, quais IDs, nomes, linguagem
+    
 
-TC 0003: 
+TC 0003: Criar uma issue
     [Tags]              TC0003
     [Documentation]     
+    Criar uma issue com title, body, assignees e labels
 
 TC 0004: 
     [Tags]              TC0004

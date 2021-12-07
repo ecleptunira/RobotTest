@@ -1,10 +1,14 @@
+git rm {nome do arquivo} // caso seja uma pasta, deve ter uma "/" no final do nome da pasta
+
+Remove arquivos do git
+
+*************
+
 http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#configuring-execution - outros comandos.
 
 -i ou --include : Include
 -e ou --exclude : Exclude
 -R ou --rerunfailed : Roda os teste que falharam de novo. Ele pode ser executado diversas vezes no mesmo teste.
-
-
 
 ************** 
 
