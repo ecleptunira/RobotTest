@@ -1,4 +1,1 @@
-URLBASE: "https://translate.google.com.br/?hl=pt-BR&sl=pt&tl=en&op=translate"
-URL_GOOGLETRADUTOR: "https://translate.google.com.br/?hl=pt-BR&sl=pt&tl=en&op=translate"
 BROWSER: "chrome"
-

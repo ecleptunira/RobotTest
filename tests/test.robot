@@ -40,11 +40,11 @@ TC 0005: trancar e destrancar uma issue
     [Documentation]     
 
 
-TC 0006: 
+TC 0006: Listar as linguagens usadas no repositorio.
     [Tags]              TC0006
     [Documentation]     
 
-TC 0007: 
+TC 0007: criar um reação em uma issue
     [Tags]              TC0007
     [Documentation]     
 

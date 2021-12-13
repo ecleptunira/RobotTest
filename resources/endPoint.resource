@@ -1,21 +1,21 @@
 #${VARIAVEL_SIMPLES}    1234
 #@{LISTA}               morango  banana  abacate
 #&{DICIONARIO}          nome=Rafael  Sobrenome=Reis
-#lembrar de colocar as "/" ao concatenar &{URLBASE}/&{ENDPOINT.user}
-
-${MY_USER}      ecleptunira
-
+#lembrar de colocar as "/" ao concatenar &{URLBASE}/&{ENDPOINT}
 
 ${URLBASE}      https://api.github.com
 
-#Get   (todos_repositorios, repositorio_especifico)
-#Post  (Criar_issue, )
-
 &{ENDPOINT}     usuario=user
 #endpoint repositories
-...             todos_repositorios=users/${MY_USER}/repos
-...             repositorio_especifico=repos/${MY_USER}/${REPOSITORY}
+...             get_all_repos=${URLBASE}/users/${MY_USER}/repos
+...             get_repos_especific=${URLBASE}/repos/${MY_USER}/${REPOSITORY[0]}
+...             get_language_repos=${URLBASE}/repos/${MY_USER}/${REPOSITORY[0]}/languages
 #endpoint issues
-...             criar_issue=repos/${MY_USER}/${REPOSITORY}/issue
-...             todas_as_issues=repos/${MY_USER}/${REPOSITORY}/issue
-...             issue_especifica=repos/${MY_USER}/${REPOSITORY}/issue/${ISSUE}
+...             post_make_issue=${URLBASE}/repos/${MY_USER}/${REPOSITORY[0]}/issue
+...             get_all_issues=${URLBASE}/repos/${MY_USER}/${REPOSITORY[0]}/issues
+...             especific_issue=${URLBASE}/repos/${MY_USER}/${REPOSITORY[0]}/issue/${ISSUE}
+...             put_lock_issue=${URLBASE}/repos/${MY_USER}/${REPOSITORY[0]}/issues/${ISSUE_NUMBER}/lock
+...             delete_unlock_issue=${URLBASE}/repos/${MY_USER}/${REPOSITORY[0]}/issues/${ISSUE_NUMBER}/lock
+#endpoint reactions
+#Necessário uma content
+...             post_reaction=${URLBASE}/repos/${MY_USER}/${REPOSITORY[0]}/issues/comments/${COMENT_ID}/reactions
