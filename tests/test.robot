@@ -2,6 +2,7 @@
 Resource            ${ROOT}/CursoTestCase/resources/main.resource
 Suite Setup         Abrir navegador
 Suite Teardown      Fechar navegador
+Force Tags          testxpto
 
 *** Variables ***
 
@@ -28,13 +29,16 @@ TC 0003: Criar uma issue
     [Documentation]     
     Criar uma issue com title, body, assignees e labels
 
-TC 0004: 
+TC 0004: pegar uma issue especifica
     [Tags]              TC0004
     [Documentation]     
+    Pegar todas as issues
+    Pegar uma issue especifica 
 
-TC 0005: 
+TC 0005: trancar e destrancar uma issue
     [Tags]              TC0005
     [Documentation]     
+
 
 TC 0006: 
     [Tags]              TC0006

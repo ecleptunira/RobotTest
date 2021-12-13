@@ -1,6 +1,6 @@
 {{
-    "title": "",
-    "body": "",
+    "title": "Teste de criar Issue via API do GitHub by [{user_git}]",
+    "body": "{user_git} criou essa Issue via API do GitHub nos testes com Robot Framework!",
     "assignees": [
         "{MY_USER}"
     ],
