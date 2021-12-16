@@ -7,3 +7,6 @@ ${MY_USER}      ecleptunira
 ...             project_SMAUG
 
 *** Keywords ***
+
+Conectar com autenticação básica no APi do GitHub
+    
