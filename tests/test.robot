@@ -1,7 +1,5 @@
 *** Settings ***
 Resource            ${ROOT}/CursoTestCase/resources/main.resource
-Suite Setup         Abrir navegador
-Suite Teardown      Fechar navegador
 Force Tags          testxpto
 
 *** Variables ***
@@ -13,9 +11,10 @@ TC 0001: Procurar o Usuario e coletar suas informações
     [Tags]              TC0001
     [Documentation]     
     Conectar com autenticação básica no APi do GitHub
-    Coletar quantidade de repositorio
-    coletar quantos seguidores tem
-    quando criei a conta
+    Coletar dados do usuario
+    #Coletar quantidade de repositorio
+    #coletar quantos seguidores tem
+    #quando criei a conta
 
 TC 0002: Procurando todos os repositorios do usuario
     [Tags]              TC0002

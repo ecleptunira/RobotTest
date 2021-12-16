@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ${ROOT}/resources/main.resource
+Resource    ${ROOT}/CursoTestCase/resources/main.resource
 
 *** Variable ***
 
