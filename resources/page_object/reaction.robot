@@ -5,4 +5,3 @@ Resource    ${ROOT}/CursoTestCase/resources/main.resource
 
 
 *** Keywords ***
-
