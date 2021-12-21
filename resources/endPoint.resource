@@ -11,7 +11,7 @@ ${URLBASE}      https://api.github.com
 
 &{ENDPOINT}     
 #endpoint user
-...             get_user=/users/${MY_USER}
+...             get_user=users/${MY_USER}
 #endpoint repositories
 ...             get_all_repos=${URLBASE}/users/${MY_USER}/repos
 ...             get_repos_especific=${URLBASE}/repos/${MY_USER}/${REPOSITORY[0]}

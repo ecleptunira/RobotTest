@@ -7,5 +7,6 @@ Resource    ${ROOT}/CursoTestCase/resources/main.resource
 *** Keywords ***
 
 Coletar dados do usuario
-    ${response.json()}     Get On Session   alias=Mygithub      url=${URLBASE}
-    log     ${response.json()}
+    ${response}     Get    url=${URLBASE}/${ENDPOINT.get_user}    expected_status=any
+    Should Be Equal        ${response.json()["login"]}            ecleptunira
+    log                    ${response.json()["login"]}

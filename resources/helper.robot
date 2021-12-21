@@ -11,5 +11,5 @@ ${MY_USER}      ecleptunira
 *** Keywords ***
 
 Conectar com autenticação básica no APi do GitHub
-    ${AUTH}     Create List     ${MY_GITHUB_USER}   ${MY_GITHUB_PASS}   ${MY_GITHUB_TOKEN}
+    ${AUTH}     Create List     ${MY_GITHUB_USER}   ${MY_GITHUB_PASS}
     Create Session      alias=Mygithub      url=${URLBASE}      auth=${AUTH}    disable_warnings=true
