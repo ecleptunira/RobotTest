@@ -9,7 +9,7 @@ Force Tags          testxpto
 
 TC 0001: Procurar o Usuario e coletar suas informações
     [Tags]              TC0001
-    [Documentation]     Esse teste procura um usuario e solicita os dados dessa conta.
+    [Documentation]     Esse teste case procura um usuario e solicita os dados dessa conta.
     Conectar com autenticação básica no APi do GitHub
     Solicitar todos os dados do usuario
     Coletar dados especificos do usuario
@@ -17,9 +17,9 @@ TC 0001: Procurar o Usuario e coletar suas informações
 
 TC 0002: Procurando todos os repositorios do usuario
     [Tags]              TC0002
-    [Documentation]     
+    [Documentation]     Esse test case procura todos os repositorios do usuario e identifica a quantidade, nome, ID e linguagem
     Coletar quantos repositorios tem o usuario
-    Qual a "description" dos repositorios do usuario, "ID", "language"
+    Qual a description dos repositorios do usuario, id, language
 
 TC 0003: Criar uma issue
     [Tags]              TC0003
