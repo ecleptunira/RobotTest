@@ -15,3 +15,6 @@ Coletar quantos repositorios tem o usuario
 Qual o nome dos repositorios do usuario, quais IDs, nomes, linguagem
     Log Many                O nome do primeiro repositório é ${response.json()[0]["name"]}
     ...                     O nome do segundo repositório é ${response.json()[1]["name"]}
+
+Qual a "description" dos repositorios do usuario, "ID", "language"
+    

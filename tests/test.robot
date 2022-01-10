@@ -19,8 +19,7 @@ TC 0002: Procurando todos os repositorios do usuario
     [Tags]              TC0002
     [Documentation]     
     Coletar quantos repositorios tem o usuario
-    Qual o nome dos repositorios do usuario, quais IDs, nomes, linguagem
-    
+    Qual a "description" dos repositorios do usuario, "ID", "language"
 
 TC 0003: Criar uma issue
     [Tags]              TC0003
