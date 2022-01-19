@@ -24,7 +24,7 @@ TC 0002: Procurando todos os repositorios do usuario
 TC 0003: Criar uma issue
     [Tags]              TC0003
     [Documentation]     
-    Criar uma issue com title, body, assignees e labels
+    Criar uma issue com title "teste", body "teste body", assignees "ecleptunira" e labels
 
 TC 0004: pegar uma issue especifica
     [Tags]              TC0004

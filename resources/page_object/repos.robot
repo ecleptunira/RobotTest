@@ -8,9 +8,10 @@ Resource    ${ROOT}/CursoTestCase/resources/main.resource
 
 Coletar quantos repositorios tem o usuario
     ${response}     Get     url=${URLBASE}/${endpoint.get_all_repos}
-    Set Global Variable     ${response}
+    Set Test Variable       ${response}
     Log                     ${response.json()}
-    Get Length              ${response.json()}
+    ${repositorios}         Get Length              ${response.json()}
+    Set Test Variable       ${repositorios}
     #atualizar com um for, e assim passar para as proximas keywords
 
 Qual a description dos repositorios do usuario, id, language

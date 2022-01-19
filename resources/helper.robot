@@ -5,6 +5,7 @@ Resource    ${ROOT}/CursoTestCase/resources/main.resource
 ${MY_USER}      ecleptunira
 @{REPOSITORY}   RobotTest
 ...             project_SMAUG
+...             Projetos-avulsos
 @{ISSUE}       1
 ...            2
 
