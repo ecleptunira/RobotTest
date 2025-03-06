@@ -1,6 +1,6 @@
 *** Settings ***
-Resource            ${ROOT}/CursoTestCase/resources/main.resource
-Force Tags          testxpto
+Resource            ../../CursoTestCase/resources/main.resource
+Test Tags          testxpto
 
 *** Variables ***
 
@@ -23,36 +23,36 @@ TC 0002: Procurando todos os repositorios do usuario
 
 TC 0003: Criar uma issue
     [Tags]              TC0003
-    [Documentation]     
+    [Documentation]     Esse test case cria uma issue dentro de um repositorio
     Criar uma issue com title "teste", body "teste body", assignees "ecleptunira" e labels
 
-TC 0004: pegar uma issue especifica
-    [Tags]              TC0004
-    [Documentation]     
-    Pegar todas as issues
-    Pegar uma issue especifica 
+# TC 0004: pegar uma issue especifica
+#     [Tags]              TC0004
+#     [Documentation]     
+#     Pegar todas as issues
+#     Pegar uma issue especifica 
 
-TC 0005: trancar e destrancar uma issue
-    [Tags]              TC0005
-    [Documentation]     
+# TC 0005: trancar e destrancar uma issue
+#     [Tags]              TC0005
+#     [Documentation]     
 
 
-TC 0006: Listar as linguagens usadas no repositorio.
-    [Tags]              TC0006
-    [Documentation]     
+# TC 0006: Listar as linguagens usadas no repositorio.
+#     [Tags]              TC0006
+#     [Documentation]     
 
-TC 0007: criar um reação em uma issue
-    [Tags]              TC0007
-    [Documentation]     
+# TC 0007: criar um reação em uma issue
+#     [Tags]              TC0007
+#     [Documentation]     
 
-TC 0008: 
-    [Tags]              TC0008
-    [Documentation]     
+# TC 0008: 
+#     [Tags]              TC0008
+#     [Documentation]     
 
-TC 0009: 
-    [Tags]              TC0009
-    [Documentation]     
+# TC 0009: 
+#     [Tags]              TC0009
+#     [Documentation]     
 
-TC 0010: 
-    [Tags]              TC0010
-    [Documentation]     
+# TC 0010: 
+#     [Tags]              TC0010
+#     [Documentation]     
