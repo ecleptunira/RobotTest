@@ -3,7 +3,7 @@
 #&{DICIONARIO}          nome=Rafael  Sobrenome=Reis
 #lembrar de colocar as "/" ao concatenar &{URLBASE}/&{ENDPOINT}
 *** Settings ***
-Resource    ${ROOT}/CursoTestCase/resources/main.resource
+Resource    ../../CursoTestCase/resources/main.resource
 
 *** Variables ***
 
@@ -19,7 +19,7 @@ ${URLBASE}      https://api.github.com
 #endpoint issues
 ...             post_make_issue=repos/${MY_USER}/${REPOSITORY[0]}/issue
 ...             get_all_issues=repos/${MY_USER}/${REPOSITORY[0]}/issues
-...             especific_issue=repos/${MY_USER}/${REPOSITORY[0]}/issue/${ISSUE[0]}
+...             get_especific_issue=repos/${MY_USER}/${REPOSITORY[0]}/issue/${ISSUE[0]}
 ...             put_lock_issue=repos/${MY_USER}/${REPOSITORY[0]}/issues/${ISSUE[0]}/lock
 ...             delete_unlock_issue=repos/${MY_USER}/${REPOSITORY[0]}/issues/${ISSUE}/lock
 #endpoint reactions

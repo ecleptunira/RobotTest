@@ -1,7 +1,7 @@
 *** Settings ***
-Resource    ${ROOT}/CursoTestCase/resources/main.resource
+Resource    ../main.resource
 
-*** Variable ***
+*** Variables ***
 
 
 *** Keywords ***

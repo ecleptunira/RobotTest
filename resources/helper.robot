@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ${ROOT}/CursoTestCase/resources/main.resource
+Resource    main.resource
 
 *** Variables ***
 ${MY_USER}      ecleptunira
