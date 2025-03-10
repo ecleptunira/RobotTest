@@ -16,4 +16,4 @@ Resource    ../../CursoTestCase/resources/page_object/issue.robot
 Resource    ../../CursoTestCase/resources/page_object/reaction.robot
 Resource    ../../CursoTestCase/resources/page_object/repos.robot
 Resource    ../../CursoTestCase/resources/page_object/users.robot
-Resource    ../../CursoTestCase/results/my_user_and_passwords.robot
+Resource    ../../CursoTestCase/informacoes/my_user_and_passwords.robot
