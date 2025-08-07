@@ -3,7 +3,7 @@
 #&{DICIONARIO}          nome=Rafael  Sobrenome=Reis
 #lembrar de colocar as "/" ao concatenar &{URLBASE}/&{ENDPOINT}
 *** Settings ***
-Resource    ../../CursoTestCase/resources/main.resource
+Resource    main.resource
 
 *** Variables ***
 

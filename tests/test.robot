@@ -1,5 +1,5 @@
 *** Settings ***
-Resource            ../../CursoTestCase/resources/main.resource
+Resource            ../resources/main.resource
 Test Tags          testxpto
 
 *** Variables ***
